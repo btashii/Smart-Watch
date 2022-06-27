@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <!-- Metro 4 -->
+
+      <link rel="stylesheet" href="metro-4.2.45/css/metro-all.min.css">
+      <!--In-Text CSS-->
+      <style>
+         #preloader {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: 9999;
+         background-image: url('metro-4.2.45/heartbeat.gif');
+         background-repeat: no-repeat;
+         background-color: #FFF;
+         background-position: center;
+         }
+      </style>
+   </head>
+   <body class="bg-grayWhite" id="outPopUp">
+      <!--Navbar-->
+      <div data-role="appbar" data-expand-point="md" style="border: 2px solid black">
+         <div class="multi-action">
+    <button class="action-button rotate-minus bg-white fg-black"
+            onclick="$(this).toggleClass('active')">
+        <span class="icon"><span class="mif-plus"></span></span>
+    </button>
+    <ul class="actions drop-right">
+        <li class="bg-blue"><a href="#"><span class="mif-home mif-1x"></span></a></li>
+        <li class="bg-teal"><a href="#"><span class="mif-library"></span></a></li>
+        <li class="bg-pink"><a href="#"><span class="mif-alarm"></span></a></li>
+        <li class="bg-orange"><a href="#"><span class="mif-lock"></span></a></li>
+    </ul>
+</div>
+
+         <ul class="app-bar-menu">
+            <li>
+               <a href="#" class="dropdown-toggle" style="color:blue">Navigate</a>
+               <ul class="d-menu" data-role="dropdown">
+                 <li>
+               <a href="#" class="dropdown-toggle" style="color:green">More</a>
+               <ul class="d-menu" data-role="dropdown">
+                  <li><a href="#">Weather</a></li>
+                  <li><a href="#">News</a></li>
+                  <li><a href="#">Cube</a></li>
+               </ul>
+            </li>
+                  <li><a href="#">Status</a></li>
+                  <li><a href="#">Statistics</a></li>
+               </ul>
+            </li>
+            <li>
+               <a href="#" class="dropdown-toggle" style="color:orange">Settings</a>
+               <ul class="d-menu" data-role="dropdown">
+                  <li><a href="#">Sleep</a></li>
+                  <li><a href="#">Open Terminal</a></li>
+                  <li class="divider bg-lightGray"></li>
+               </ul>
+            </li>
+            <li><a href="#" style="color:red">Emergency</a></li>
+         </ul>
+      </div>
+      <!--Preloader-->
+      <div id="preloader" class="preloader"></div>
+      <!--Preloader-->
+      <!--Margin Top to move tiles beyond navbar-->
+      <div class="tiles-grid tiles-group size-1" style="margin-top: 65px; left: 4.5px">
+         <div data-role="tile" data-size="medium" class="col-1" style="background-color: black" data-effect="hover-slide-right">
+            <div class = "slide-front">
+               <center>
+                  <h4 id="date" style="color:cyan"></h4>
+               </center>
+               <center>
+                  <h4 id="whatday" style="color:cyan"></h4>
+               </center>
+               <span class="branding-bar">Tap for more</span>
+            </div>
+            <div class="slide-back">
+              <center>
+               <h3 style="color:cyan">Special Holidays:</h3>
+               <h5 style="color:cyan">test</h5>
+             </center>
+            </div>
+         </div>
+
+         <!--Blue Tile 1-->
+         <div data-role="tile" data-size="small" class="col-1">
+           <center>
+           <span class = "mif-map mif-5x"></span>
+            </center>
+         </div>
+         <!--Blue Tile 2-->
+
+         <div data-role="tile" data-size="small" class="col-2">
+           <a href = "map">
+             <center>
+             <span class = "mif-calculator2 mif-5x fg-white"></span>
+            </center>
+       </a>
+         </div>
+         <div data-role="tile" data-size="medium" style="background-color: white" class="col-1" data-effect="hover-zoom-right">
+            <div class="slide-front">
+              <!--
+               <img src="{{ url_for('static', filename='power.png')}}" class="h-100 w-100"> -->
+               <img src="metro-4.2.45/power.png" class="h-100 w-100">
+            </div>
+            <div class="slide-back d-flex flex-justify-center flex-align-center p-4 op-mauve">
+               <h1 class="text-center" style="color: cyan">
+                  Power off?
+               </h1>
+            </div>
+         </div>
+         <div data-role="tile" data-size="medium" class="col-3 row-1" style="background-color: purple">
+          <a class="branding-bar" href="weather.html" style="color:red">More</span>
+            <a class="weatherwidget-io disabled" href="https://forecast7.com/en/40d87n74d42/new-york/?unit=us" data-label_1="New York" data-icons="Climacons Animated" data-days="1" data-theme="original" >New York</a>
+            <script>
+               !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+            </script>
+         </div>
+         <!-- Third Tile -->
+         <div data-role="tile" data-size="small" class="col-3 row-3">
+           <a href = "#">
+             <center>
+             <span class = "mif-mic mif-5x fg-white"></span>
+            </center>
+       </a>
+
+         </div>
+         <!-- Fourth Tile -->
+         <div data-role="tile" data-size="small" class="col-4 row-3">
+
+           <a href = "#">
+             <center>
+             <span class = "mif-calendar mif-5x fg-white"></span>
+            </center>
+            </a>
+
+         </div>
+         <!--<div data-role="tile" data-size="medium" data-cover="{{ url_for('static', filename='newsicon.png')}}" class="col-3 row-4" data-effect="hover-zoom-right">-->
+         <div data-role="tile" data-size="medium" data-cover="metro-4.2.45/newsicon.png" class="col-3 row-4" data-effect="hover-zoom-right">
+          <span style="color:black" class="branding-bar">News</span>
+      </div>
+      <!-- jQuery first, then Metro UI JS -->
+      <script src="metro-4.2.45/jquery/jquery.js"></script>
+      <script src="metro-4.2.45/js/metro.min.js"></script>
+      <script src="metro-4.2.45/js/custom.js"></script>
+
+      <!--
+      <script src="{{ url_for('static', filename='jquery.js')}}"></script>
+      <script src="{{ url_for('static', filename='metro.min.js')}}"></script>
+      <script src="{{ url_for('static', filename='custom.js')}}"></script>
+    -->
+      <!--In-Text Scripts-->
+   </body>
+</html>
+
+
+<!--<center><p id="namewithgreet"></p></center>
+Maybe use somewhere else?
+-->
