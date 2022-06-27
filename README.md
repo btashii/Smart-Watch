@@ -2,11 +2,8 @@
 Project Developed from Jan 2020 - Present [On Hold]
 This is the interface programming on the smart watch! 
 
-This watch: 
--Uses the Raspberry Pi Zero W.
--Features a PiTFT touchscreen. 
--Consists of a Metro-Styled GUI using HTML, CSS and Javascript. 
--Powered by a 3.7V 2500 mAh Lithium Polymer battery. 
+This watch uses the Raspberry Pi Zero W and features a PiTFT touchscreen. It consists of a Metro-Styled GUI using HTML, CSS and Javascript. 
+It is also powered by a 3.7V 2500 mAh Lithium Polymer battery. 
 
 <h1 align = "center">Smart Watch Interface</h1>
 <p align="center">
